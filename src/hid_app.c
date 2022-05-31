@@ -22,13 +22,13 @@
 
 // extra functions: 4 buttons layout mapping
 
-#define X_PIN 4           // Board: 12
-#define Y_PIN 5           // Board: 13
+#define X_PIN 10           // Board: 12
+#define Y_PIN 11           // Board: 13
 
 // extra functions: 6 buttons layout mapping
 
-#define C_PIN 10          // Board: 14
-#define Z_PIN 11          // Board: 15
+#define C_PIN 12          // Board: 14
+#define Z_PIN 13          // Board: 15
 
 // shorthand
 
