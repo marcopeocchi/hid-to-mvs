@@ -5,31 +5,9 @@
 #include "bsp/board.h"
 #include "tusb.h"
 
+#include "jamma_layout.h"
+
 #include "pico/stdlib.h"
-
-// basic functions: 4 buttons layout mapping
-
-#define A_PIN 2           // Board: 4
-#define B_PIN 3           // Board: 5
-#define X_PIN 4           // Board: 6
-#define Y_PIN 5           // Board: 7
-
-// d-pad as analog stick mapping
-
-#define DPAD_UP_PIN    6  // Board: 9
-#define DPAD_DOWN_PIN  7  // Board: 10
-#define DPAD_RIGHT_PIN 8  // Board: 11
-#define DPAD_LEFT_PIN  9  // Board: 12
-
-// extra functions: 6 buttons layout mapping
-
-#define C_PIN 10          // Board: 14
-#define Z_PIN 11          // Board: 15
-
-// utility functions: coinup and start
-
-#define COIN_PIN  12      // Board: 16
-#define START_PIN 13      // Board: 17
 
 //--------------------------------------------------------------------+
 // MACRO CONSTANT TYPEDEF PROTYPES
