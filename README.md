@@ -5,3 +5,6 @@ Connect any compatible HID joystick/gamepad to the Pi Pico micro-USB port, each 
 
 ## 2 Buttons layout (Analog/DPAD + A,B)
 ![sketch](./res/mvs-usb_bb.png)
+
+## 4 and 6 buttons layout (Analog/DPAD + A,B,X,Y,[L,R])
+Needs a second Darlington array IC
