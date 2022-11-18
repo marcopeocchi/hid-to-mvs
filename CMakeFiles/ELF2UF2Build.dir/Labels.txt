@@ -1,0 +1,13 @@
+# Target labels
+ ELF2UF2Build
+# Source files and their labels
+/Users/marco/dev/homebrew/hid_controller/CMakeFiles/ELF2UF2Build
+/Users/marco/dev/homebrew/hid_controller/CMakeFiles/ELF2UF2Build.rule
+/Users/marco/dev/homebrew/hid_controller/CMakeFiles/ELF2UF2Build-complete.rule
+/Users/marco/dev/homebrew/hid_controller/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-build.rule
+/Users/marco/dev/homebrew/hid_controller/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure.rule
+/Users/marco/dev/homebrew/hid_controller/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-download.rule
+/Users/marco/dev/homebrew/hid_controller/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-install.rule
+/Users/marco/dev/homebrew/hid_controller/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-mkdir.rule
+/Users/marco/dev/homebrew/hid_controller/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-patch.rule
+/Users/marco/dev/homebrew/hid_controller/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-update.rule

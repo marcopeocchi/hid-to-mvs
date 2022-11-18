@@ -1,22 +1,23 @@
 #include "bsp/board.h"
 #include "tusb.h"
 
-#include "jamma_layout.h"
+#include "board_layout.h"
 
 #include "pico/stdlib.h"
+#include "hid_app.h"
 
 
-// hid report layout
+// hid report typedef
 typedef struct TU_ATTR_PACKED
 {
   uint8_t x, y, z, rz; // joystick
 
   struct {
-    uint8_t dpad     : 4; // 0x08
-    uint8_t square   : 1; // west
-    uint8_t cross    : 1; // south
-    uint8_t circle   : 1; // east
-    uint8_t triangle : 1; // north
+    uint8_t dpad  : 4; // 0x08
+    uint8_t west  : 1; // X
+    uint8_t south : 1; // A
+    uint8_t east  : 1; // B
+    uint8_t north : 1; // Y
   };
 
   struct {
@@ -24,26 +25,30 @@ typedef struct TU_ATTR_PACKED
     uint8_t r1     : 1;
     uint8_t l2     : 1;
     uint8_t r2     : 1;
-    uint8_t share  : 1;
+    uint8_t start  : 1;
     uint8_t option : 1;
     uint8_t l3     : 1;
     uint8_t r3     : 1;
   };
 
   struct {
-    uint8_t ps      : 1; 
-    uint8_t tpad    : 1; // track pad click
+    uint8_t meta    : 1; 
+    uint8_t touch   : 1; // track pad click
     uint8_t counter : 6; // +1 each report
   };
 
 } controller_report_t;
 
-// check if device is Sony DualShock 4
+
+// check if device is compatible by checking its VID and PID
+// compatible devices list: 
+// https://www.github.com/pico-mvs-hid/wiki/compatible_devices
 static inline bool is_compatible(uint8_t dev_addr)
 {
   uint16_t vid, pid;
   tuh_vid_pid_get(dev_addr, &vid, &pid);
 
+  return true;
   return ((vid == 0x054c && (pid == 0x09cc || pid == 0x05c4)) // Sony DualShock4 
            || (vid == 0x0f0d && pid == 0x005e)                // Hori FC4 
            || (vid == 0x0f0d && pid == 0x00ee)                // Hori PS4 Mini (PS4-099U) 
@@ -57,10 +62,7 @@ static inline bool is_compatible(uint8_t dev_addr)
 // MACRO TYPEDEF CONSTANT ENUM DECLARATION
 //--------------------------------------------------------------------+
 
-void hid_app_task(void)
-{
-  // nothing to do
-}
+void hid_app_task(void){}
 
 //--------------------------------------------------------------------+
 // TinyUSB Callbacks
@@ -82,11 +84,11 @@ void tuh_hid_mount_cb(uint8_t dev_addr, uint8_t instance, uint8_t const* desc_re
   printf("VID = %04x, PID = %04x\r\n", vid, pid);
 
   // Compatible controllers list
-  if ( is_compatible(dev_addr) )
+  if (is_compatible(dev_addr))
   {
     // request to receive report
     // tuh_hid_report_received_cb() will be invoked when report is available
-    if ( !tuh_hid_receive_report(dev_addr, instance) )
+    if (!tuh_hid_receive_report(dev_addr, instance))
     {
       printf("Error: cannot request to receive report\r\n");
     }
@@ -97,7 +99,6 @@ void tuh_hid_mount_cb(uint8_t dev_addr, uint8_t instance, uint8_t const* desc_re
 void tuh_hid_umount_cb(uint8_t dev_addr, uint8_t instance)
 {
   printf("HID device address = %d, instance = %d is unmounted\r\n", dev_addr, instance);
-
 }
 
 // check if different than 2
@@ -116,11 +117,12 @@ bool diff_report(controller_report_t const* rpt1, controller_report_t const* rpt
            diff_than_2(rpt1->z, rpt2->z) || diff_than_2(rpt1->rz, rpt2->rz);
 
   // check the reset with mem compare
-  result |= memcmp(&rpt1->rz + 1, &rpt2->rz + 1, sizeof(controller_report_t)-4);
+  result |= memcmp(&rpt1->rz + 1, &rpt2->rz + 1, sizeof(controller_report_t) - 4);
 
   return result;
 }
 
+// process HID report
 void process_compatible(uint8_t const* report, uint16_t len)
 {
   // previous report used to compare for changes
@@ -140,81 +142,22 @@ void process_compatible(uint8_t const* report, uint16_t len)
 
     if (diff_report(&prev_report, &dev_report))
     {
-      dev_report.rz == 0    ? gpio_put(DPAD_UP_PIN, HIGH)    : gpio_put(DPAD_UP_PIN, LOW);
-      dev_report.rz == 0xff ? gpio_put(DPAD_DOWN_PIN, HIGH)  : gpio_put(DPAD_DOWN_PIN, LOW);
-      dev_report.z  == 0xff ? gpio_put(DPAD_RIGHT_PIN, HIGH) : gpio_put(DPAD_RIGHT_PIN, LOW);
-      dev_report.z  == 0    ? gpio_put(DPAD_LEFT_PIN, HIGH)  : gpio_put(DPAD_LEFT_PIN, LOW);
+      board_toggle_output(DPAD_UP_PIN   , dev_report.rz == 0);
+      board_toggle_output(DPAD_DOWN_PIN , dev_report.rz == 255);
+      board_toggle_output(DPAD_RIGHT_PIN, dev_report.z == 255);
+      board_toggle_output(DPAD_LEFT_PIN , dev_report.z == 0);
 
-      switch (dev_report.dpad)
-      {
-      case 0x0:                           // N
-        gpio_put(DPAD_UP_PIN, HIGH);
-        gpio_put(DPAD_DOWN_PIN, LOW);
-        gpio_put(DPAD_LEFT_PIN, LOW);
-        gpio_put(DPAD_RIGHT_PIN, LOW);
-        break;
-      case 0x1:                           // NE
-        gpio_put(DPAD_UP_PIN, HIGH);
-        gpio_put(DPAD_DOWN_PIN, LOW);
-        gpio_put(DPAD_LEFT_PIN, LOW);
-        gpio_put(DPAD_RIGHT_PIN, HIGH);
-        break;
-      case 0x2:                           // E
-        gpio_put(DPAD_UP_PIN, LOW);
-        gpio_put(DPAD_DOWN_PIN, LOW);
-        gpio_put(DPAD_LEFT_PIN, LOW);
-        gpio_put(DPAD_RIGHT_PIN, HIGH);
-        break;
-      case 0x3:                           // SE
-        gpio_put(DPAD_UP_PIN, LOW);
-        gpio_put(DPAD_DOWN_PIN, HIGH);
-        gpio_put(DPAD_LEFT_PIN, LOW);
-        gpio_put(DPAD_RIGHT_PIN, HIGH);
-        break;
-      case 0x4:                           // S
-        gpio_put(DPAD_UP_PIN, LOW);
-        gpio_put(DPAD_DOWN_PIN, HIGH);
-        gpio_put(DPAD_LEFT_PIN, LOW);
-        gpio_put(DPAD_RIGHT_PIN, LOW);
-        break;
-      case 0x5:                           // SW
-        gpio_put(DPAD_UP_PIN, LOW);
-        gpio_put(DPAD_DOWN_PIN, HIGH);
-        gpio_put(DPAD_LEFT_PIN, HIGH);
-        gpio_put(DPAD_RIGHT_PIN, LOW);
-        break;
-      case 0x6:                           // W
-        gpio_put(DPAD_UP_PIN, LOW);
-        gpio_put(DPAD_DOWN_PIN, LOW);
-        gpio_put(DPAD_LEFT_PIN, HIGH);
-        gpio_put(DPAD_RIGHT_PIN, LOW);
-        break;
-      case 0x7:                           // NW
-        gpio_put(DPAD_UP_PIN, HIGH);
-        gpio_put(DPAD_DOWN_PIN, LOW);
-        gpio_put(DPAD_LEFT_PIN, HIGH);
-        gpio_put(DPAD_RIGHT_PIN, LOW);
-        break;  
-      case 0x8:                           // Released
-        gpio_put(DPAD_UP_PIN,    LOW);
-        gpio_put(DPAD_DOWN_PIN,  LOW);
-        gpio_put(DPAD_RIGHT_PIN, LOW);
-        gpio_put(DPAD_LEFT_PIN,  LOW);
-        break;
-      default:
-        break;
-      }
+      dev_dpad_handler(dev_report.dpad);
 
-      dev_report.circle   ? gpio_put(A_PIN, HIGH) : gpio_put(A_PIN, LOW);
-      dev_report.cross    ? gpio_put(B_PIN, HIGH) : gpio_put(B_PIN, LOW);
-      dev_report.triangle ? gpio_put(X_PIN, HIGH) : gpio_put(X_PIN, LOW);
-      dev_report.square   ? gpio_put(Y_PIN, HIGH) : gpio_put(Y_PIN, LOW);
+      board_toggle_output(Y_PIN, dev_report.west);
+      board_toggle_output(B_PIN, dev_report.south);
+      board_toggle_output(A_PIN, dev_report.east);
+      board_toggle_output(X_PIN, dev_report.north);
 
-      dev_report.l1 ? gpio_put(Z_PIN, HIGH) : gpio_put(Z_PIN, LOW);
-      dev_report.r1 ? gpio_put(C_PIN, HIGH) : gpio_put(C_PIN, LOW);
+      board_toggle_output(START_PIN , dev_report.start);
+      board_toggle_output(SELECT_PIN, dev_report.option);
 
-      dev_report.share  ? gpio_put(START_PIN, HIGH) : gpio_put(START_PIN, LOW);
-      dev_report.option ? gpio_put(COIN_PIN, HIGH)  : gpio_put(COIN_PIN, LOW);
+      board_toggle_output(ALT_6_PIN, dev_report.meta);
     }
 
     prev_report = dev_report;
@@ -224,14 +167,99 @@ void process_compatible(uint8_t const* report, uint16_t len)
 // Invoked when received report from device via interrupt endpoint
 void tuh_hid_report_received_cb(uint8_t dev_addr, uint8_t instance, uint8_t const* report, uint16_t len)
 {
-  if ( is_compatible(dev_addr) )
+  if (is_compatible(dev_addr))
   {
     process_compatible(report, len);
   }
 
   // continue to request to receive report
-  if ( !tuh_hid_receive_report(dev_addr, instance) )
+  if (!tuh_hid_receive_report(dev_addr, instance))
   {
     printf("Error: cannot request to receive report\r\n");
+  }
+}
+
+
+void board_toggle_output(uint8_t pin, u_int8_t enabled)
+{
+  if (enabled)
+  {
+    gpio_put(pin, LOW);
+  }
+  else
+  {
+    gpio_put(pin, HIGH);
+  }
+}
+
+void dev_dpad_handler(uint8_t dpad_value)
+{
+  switch (dpad_value)
+  {
+  case 0:
+    // DPAD North
+    gpio_put(DPAD_UP_PIN   , LOW);
+    gpio_put(DPAD_RIGHT_PIN, HIGH);
+    gpio_put(DPAD_DOWN_PIN , HIGH);
+    gpio_put(DPAD_LEFT_PIN , HIGH);
+    return;
+  case 1:
+    // DPAD North-East                         
+    gpio_put(DPAD_UP_PIN   , LOW);
+    gpio_put(DPAD_RIGHT_PIN, LOW);
+    gpio_put(DPAD_DOWN_PIN , HIGH);
+    gpio_put(DPAD_LEFT_PIN , HIGH);
+    return;
+  case 2:  
+    // DPAD East
+    gpio_put(DPAD_UP_PIN   , HIGH);
+    gpio_put(DPAD_RIGHT_PIN, LOW);
+    gpio_put(DPAD_DOWN_PIN , HIGH);
+    gpio_put(DPAD_LEFT_PIN , HIGH);
+    return;
+  case 3:
+    // DPAD South-East
+    gpio_put(DPAD_UP_PIN   , HIGH);
+    gpio_put(DPAD_RIGHT_PIN, LOW);
+    gpio_put(DPAD_DOWN_PIN , LOW);
+    gpio_put(DPAD_LEFT_PIN , HIGH);
+    return;
+  case 4:
+    // DPAD South
+    gpio_put(DPAD_UP_PIN   , HIGH);
+    gpio_put(DPAD_RIGHT_PIN, HIGH);
+    gpio_put(DPAD_DOWN_PIN , LOW);
+    gpio_put(DPAD_LEFT_PIN , HIGH);
+    return;
+  case 5:
+    // DPAD South-West
+    gpio_put(DPAD_UP_PIN   , HIGH);
+    gpio_put(DPAD_RIGHT_PIN, HIGH);
+    gpio_put(DPAD_DOWN_PIN , LOW);
+    gpio_put(DPAD_LEFT_PIN , LOW);
+    return;
+  case 6:
+    // DPAD West
+    gpio_put(DPAD_UP_PIN   , HIGH);
+    gpio_put(DPAD_RIGHT_PIN, HIGH);
+    gpio_put(DPAD_DOWN_PIN , HIGH);
+    gpio_put(DPAD_LEFT_PIN , LOW);
+    return;
+  case 7:
+    // DPAD North-West
+    gpio_put(DPAD_UP_PIN   , LOW);
+    gpio_put(DPAD_RIGHT_PIN, HIGH);
+    gpio_put(DPAD_DOWN_PIN , HIGH);
+    gpio_put(DPAD_LEFT_PIN , LOW);
+    return;
+  case 8:
+    // DPAD Released
+    gpio_put(DPAD_UP_PIN   , HIGH);
+    gpio_put(DPAD_RIGHT_PIN, HIGH);
+    gpio_put(DPAD_DOWN_PIN , HIGH);
+    gpio_put(DPAD_LEFT_PIN , HIGH);
+    return;
+  default:
+    return;
   }
 }

@@ -1,0 +1,1 @@
+void board_output_init();

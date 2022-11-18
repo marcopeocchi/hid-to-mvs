@@ -5,9 +5,8 @@
 #include "bsp/board.h"
 #include "tusb.h"
 
-#include "jamma_layout.h"
-
-#include "pico/stdlib.h"
+#include "board_layout.h"
+#include "board_output.h"
 
 //--------------------------------------------------------------------+
 // MACRO CONSTANT TYPEDEF PROTYPES
@@ -21,48 +20,9 @@ extern void hid_app_task(void);
 int main(void)
 {
   board_init();
-
-  // enable pins
-
-  gpio_init(DPAD_UP_PIN);
-  gpio_init(DPAD_DOWN_PIN);
-  gpio_init(DPAD_RIGHT_PIN);
-  gpio_init(DPAD_LEFT_PIN);
-
-  gpio_init(A_PIN);
-  gpio_init(B_PIN);
-
-  gpio_init(COIN_PIN);
-  gpio_init(START_PIN);
-
-  // set pins as outputs
-
-  gpio_set_dir(DPAD_UP_PIN,    GPIO_OUT);
-  gpio_set_dir(DPAD_DOWN_PIN,  GPIO_OUT);
-  gpio_set_dir(DPAD_RIGHT_PIN, GPIO_OUT);
-  gpio_set_dir(DPAD_LEFT_PIN,  GPIO_OUT);
-
-  gpio_set_dir(A_PIN, GPIO_OUT);
-  gpio_set_dir(B_PIN, GPIO_OUT);
-
-  gpio_set_dir(COIN_PIN, GPIO_OUT);
-  gpio_set_dir(START_PIN, GPIO_OUT);
-
-  // init all pins to be high as MVS JAMMA reads when LOW
+  board_output_init();
   
-  gpio_put(DPAD_UP_PIN,    0);
-  gpio_put(DPAD_DOWN_PIN,  0);
-  gpio_put(DPAD_RIGHT_PIN, 0);
-  gpio_put(DPAD_LEFT_PIN,  0);
-
-  gpio_put(A_PIN, 0);
-  gpio_put(B_PIN, 0);
-
-  gpio_put(COIN_PIN,  0);
-  gpio_put(START_PIN, 0);
-
   // init USB
-
   tusb_init();
 
   while (1)
@@ -84,10 +44,6 @@ int main(void)
 }
 
 //--------------------------------------------------------------------+
-// TinyUSB Callbacks
-//--------------------------------------------------------------------+
-
-//--------------------------------------------------------------------+
 // Blinking Task
 //--------------------------------------------------------------------+
 void led_blinking_task(void)
@@ -97,10 +53,9 @@ void led_blinking_task(void)
 
   static bool led_state = false;
 
-  // Blink every interval ms
-  if ( board_millis() - start_ms < interval_ms) return; // not enough time
+  if (board_millis() - start_ms < interval_ms) return; 
   start_ms += interval_ms;
 
   board_led_write(led_state);
-  led_state = 1 - led_state; // toggle
+  led_state = 1 - led_state;
 }
