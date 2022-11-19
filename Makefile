@@ -117,6 +117,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named tinyusb_pico_pio_usb_usb_tx_pio_h
+
+# Build rule for target.
+tinyusb_pico_pio_usb_usb_tx_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tinyusb_pico_pio_usb_usb_tx_pio_h
+.PHONY : tinyusb_pico_pio_usb_usb_tx_pio_h
+
+# fast build rule for target.
+tinyusb_pico_pio_usb_usb_tx_pio_h/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyusb_pico_pio_usb_usb_tx_pio_h.dir/build.make CMakeFiles/tinyusb_pico_pio_usb_usb_tx_pio_h.dir/build
+.PHONY : tinyusb_pico_pio_usb_usb_tx_pio_h/fast
+
+#=============================================================================
+# Target rules for targets named tinyusb_pico_pio_usb_usb_rx_pio_h
+
+# Build rule for target.
+tinyusb_pico_pio_usb_usb_rx_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tinyusb_pico_pio_usb_usb_rx_pio_h
+.PHONY : tinyusb_pico_pio_usb_usb_rx_pio_h
+
+# fast build rule for target.
+tinyusb_pico_pio_usb_usb_rx_pio_h/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyusb_pico_pio_usb_usb_rx_pio_h.dir/build.make CMakeFiles/tinyusb_pico_pio_usb_usb_rx_pio_h.dir/build
+.PHONY : tinyusb_pico_pio_usb_usb_rx_pio_h/fast
+
+#=============================================================================
 # Target rules for targets named pico-hid-mvs
 
 # Build rule for target.
@@ -220,6 +246,1390 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
+Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.obj: Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.c.obj
+
+Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.i: Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.c.i
+
+Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.s: Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.c.s
+
+Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.obj: Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.c.obj
+
+Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.i: Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.c.i
+
+Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.s: Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.c.s
+
+Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.obj: Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.c.obj
+
+Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.i: Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.c.i
+
+Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.s: Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.c.s
+
+Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.obj: Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.c.obj
+
+Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.i: Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.c.i
+
+Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.s: Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.c.s
+
+Users/marco/sdk/pico-sdk/src/common/pico_time/time.obj: Users/marco/sdk/pico-sdk/src/common/pico_time/time.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_time/time.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/common/pico_time/time.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_time/time.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_time/time.c.obj
+
+Users/marco/sdk/pico-sdk/src/common/pico_time/time.i: Users/marco/sdk/pico-sdk/src/common/pico_time/time.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_time/time.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/common/pico_time/time.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_time/time.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_time/time.c.i
+
+Users/marco/sdk/pico-sdk/src/common/pico_time/time.s: Users/marco/sdk/pico-sdk/src/common/pico_time/time.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_time/time.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/common/pico_time/time.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_time/time.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_time/time.c.s
+
+Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.obj: Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+
+Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.i: Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.c.i
+
+Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.s: Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.c.s
+
+Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.obj: Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.c.obj
+
+Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.i: Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.c.i
+
+Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.s: Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.c.s
+
+Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.obj: Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.c.obj
+
+Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.i: Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.c.i
+
+Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.s: Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.c.s
+
+Users/marco/sdk/pico-sdk/src/common/pico_util/queue.obj: Users/marco/sdk/pico-sdk/src/common/pico_util/queue.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/queue.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/common/pico_util/queue.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_util/queue.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/queue.c.obj
+
+Users/marco/sdk/pico-sdk/src/common/pico_util/queue.i: Users/marco/sdk/pico-sdk/src/common/pico_util/queue.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/queue.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/common/pico_util/queue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_util/queue.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/queue.c.i
+
+Users/marco/sdk/pico-sdk/src/common/pico_util/queue.s: Users/marco/sdk/pico-sdk/src/common/pico_util/queue.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/queue.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/common/pico_util/queue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/common/pico_util/queue.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/common/pico_util/queue.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.i: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.s: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_divider/divider.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_divider/divider.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.i: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.s: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.i: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.s: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.i: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.s: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.i: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.s: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.i: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.s: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.i: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.s: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.i: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.s: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_divider/divider.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_divider/divider.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj
+
+# target to build an object file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i
+
+# target to preprocess a source file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s
+
+# target to generate assembly for a file
+Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+.PHONY : Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+
+Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.obj: Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.c.obj
+.PHONY : Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.c.obj
+.PHONY : Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.c.obj
+
+Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.i: Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.c.i
+.PHONY : Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.c.i
+.PHONY : Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.c.i
+
+Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.s: Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.c.s
+.PHONY : Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.c.s
+.PHONY : Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.c.s
+
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.obj: Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.c.obj
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.c.obj
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.c.obj
+
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.i: Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.c.i
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.c.i
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.c.i
+
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.s: Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.c.s
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.c.s
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.c.s
+
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.obj: Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.c.obj
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.c.obj
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.c.obj
+
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.i: Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.c.i
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.c.i
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.c.i
+
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.s: Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.c.s
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.c.s
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.c.s
+
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.obj: Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.c.obj
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.c.obj
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.c.obj
+
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.i: Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.c.i
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.c.i
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.c.i
+
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.s: Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.c.s
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.c.s
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.c.s
+
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.obj: Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.c.obj
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.c.obj
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.c.obj
+
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.i: Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.c.i
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.c.i
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.c.i
+
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.s: Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.c.s
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.c.s
+.PHONY : Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.c.s
+
+Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.obj: Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.c.obj
+
+Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.i: Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.c.i
+
+Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.s: Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.c.s
+
+Users/marco/sdk/tinyusb/src/class/hid/hid_host.obj: Users/marco/sdk/tinyusb/src/class/hid/hid_host.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/class/hid/hid_host.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/src/class/hid/hid_host.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/class/hid/hid_host.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/class/hid/hid_host.c.obj
+
+Users/marco/sdk/tinyusb/src/class/hid/hid_host.i: Users/marco/sdk/tinyusb/src/class/hid/hid_host.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/class/hid/hid_host.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/src/class/hid/hid_host.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/class/hid/hid_host.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/class/hid/hid_host.c.i
+
+Users/marco/sdk/tinyusb/src/class/hid/hid_host.s: Users/marco/sdk/tinyusb/src/class/hid/hid_host.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/class/hid/hid_host.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/src/class/hid/hid_host.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/class/hid/hid_host.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/class/hid/hid_host.c.s
+
+Users/marco/sdk/tinyusb/src/class/msc/msc_host.obj: Users/marco/sdk/tinyusb/src/class/msc/msc_host.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/class/msc/msc_host.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/src/class/msc/msc_host.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/class/msc/msc_host.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/class/msc/msc_host.c.obj
+
+Users/marco/sdk/tinyusb/src/class/msc/msc_host.i: Users/marco/sdk/tinyusb/src/class/msc/msc_host.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/class/msc/msc_host.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/src/class/msc/msc_host.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/class/msc/msc_host.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/class/msc/msc_host.c.i
+
+Users/marco/sdk/tinyusb/src/class/msc/msc_host.s: Users/marco/sdk/tinyusb/src/class/msc/msc_host.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/class/msc/msc_host.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/src/class/msc/msc_host.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/class/msc/msc_host.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/class/msc/msc_host.c.s
+
+Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.obj: Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.c.obj
+
+Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.i: Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.c.i
+
+Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.s: Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.c.s
+
+Users/marco/sdk/tinyusb/src/common/tusb_fifo.obj: Users/marco/sdk/tinyusb/src/common/tusb_fifo.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/common/tusb_fifo.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/src/common/tusb_fifo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/common/tusb_fifo.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/common/tusb_fifo.c.obj
+
+Users/marco/sdk/tinyusb/src/common/tusb_fifo.i: Users/marco/sdk/tinyusb/src/common/tusb_fifo.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/common/tusb_fifo.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/src/common/tusb_fifo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/common/tusb_fifo.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/common/tusb_fifo.c.i
+
+Users/marco/sdk/tinyusb/src/common/tusb_fifo.s: Users/marco/sdk/tinyusb/src/common/tusb_fifo.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/common/tusb_fifo.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/src/common/tusb_fifo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/common/tusb_fifo.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/common/tusb_fifo.c.s
+
+Users/marco/sdk/tinyusb/src/host/hub.obj: Users/marco/sdk/tinyusb/src/host/hub.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/host/hub.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/src/host/hub.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/host/hub.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/host/hub.c.obj
+
+Users/marco/sdk/tinyusb/src/host/hub.i: Users/marco/sdk/tinyusb/src/host/hub.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/host/hub.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/src/host/hub.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/host/hub.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/host/hub.c.i
+
+Users/marco/sdk/tinyusb/src/host/hub.s: Users/marco/sdk/tinyusb/src/host/hub.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/host/hub.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/src/host/hub.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/host/hub.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/host/hub.c.s
+
+Users/marco/sdk/tinyusb/src/host/usbh.obj: Users/marco/sdk/tinyusb/src/host/usbh.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/host/usbh.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/src/host/usbh.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/host/usbh.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/host/usbh.c.obj
+
+Users/marco/sdk/tinyusb/src/host/usbh.i: Users/marco/sdk/tinyusb/src/host/usbh.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/host/usbh.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/src/host/usbh.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/host/usbh.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/host/usbh.c.i
+
+Users/marco/sdk/tinyusb/src/host/usbh.s: Users/marco/sdk/tinyusb/src/host/usbh.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/host/usbh.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/src/host/usbh.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/host/usbh.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/host/usbh.c.s
+
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.obj: Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.c.obj
+
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.i: Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.c.i
+
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.s: Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.c.s
+
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.obj: Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.c.obj
+
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.i: Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.c.i
+
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.s: Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.c.s
+
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj: Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+
+Users/marco/sdk/tinyusb/src/tusb.obj: Users/marco/sdk/tinyusb/src/tusb.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/tusb.obj
+
+# target to build an object file
+Users/marco/sdk/tinyusb/src/tusb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/tusb.c.obj
+.PHONY : Users/marco/sdk/tinyusb/src/tusb.c.obj
+
+Users/marco/sdk/tinyusb/src/tusb.i: Users/marco/sdk/tinyusb/src/tusb.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/tusb.i
+
+# target to preprocess a source file
+Users/marco/sdk/tinyusb/src/tusb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/tusb.c.i
+.PHONY : Users/marco/sdk/tinyusb/src/tusb.c.i
+
+Users/marco/sdk/tinyusb/src/tusb.s: Users/marco/sdk/tinyusb/src/tusb.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/tusb.s
+
+# target to generate assembly for a file
+Users/marco/sdk/tinyusb/src/tusb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico-hid-mvs.dir/build.make CMakeFiles/pico-hid-mvs.dir/Users/marco/sdk/tinyusb/src/tusb.c.s
+.PHONY : Users/marco/sdk/tinyusb/src/tusb.c.s
+
 src/board_output.obj: src/board_output.c.obj
 .PHONY : src/board_output.obj
 
@@ -306,8 +1716,183 @@ help:
 	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... cyw43_firmware_package"
+	@echo "... tinyusb_pico_pio_usb_usb_rx_pio_h"
+	@echo "... tinyusb_pico_pio_usb_usb_tx_pio_h"
 	@echo "... bs2_default"
 	@echo "... pico-hid-mvs"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_sync/critical_section.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_sync/lock_core.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_sync/mutex.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_sync/sem.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_time/time.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_time/time.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_time/time.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_time/timeout_helper.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_util/datetime.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_util/pheap.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_util/queue.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_util/queue.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/common/pico_util/queue.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_claim/claim.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_divider/divider.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_dma/dma.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pio/pio.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_pll/pll.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_sync/sync.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_timer/timer.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_uart/uart.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_divider/divider.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_math.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_math.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_multicore/multicore.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_platform/platform.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_printf/printf.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
+	@echo "... Users/marco/sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
+	@echo "... Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.obj"
+	@echo "... Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.i"
+	@echo "... Users/marco/sdk/tinyusb/hw/bsp/rp2040/family.s"
+	@echo "... Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.obj"
+	@echo "... Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.i"
+	@echo "... Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb.s"
+	@echo "... Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.obj"
+	@echo "... Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.i"
+	@echo "... Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_device.s"
+	@echo "... Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.obj"
+	@echo "... Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.i"
+	@echo "... Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/pio_usb_host.s"
+	@echo "... Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.obj"
+	@echo "... Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.i"
+	@echo "... Users/marco/sdk/tinyusb/hw/mcu/raspberry_pi/Pico-PIO-USB/src/usb_crc.s"
+	@echo "... Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.obj"
+	@echo "... Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.i"
+	@echo "... Users/marco/sdk/tinyusb/src/class/cdc/cdc_host.s"
+	@echo "... Users/marco/sdk/tinyusb/src/class/hid/hid_host.obj"
+	@echo "... Users/marco/sdk/tinyusb/src/class/hid/hid_host.i"
+	@echo "... Users/marco/sdk/tinyusb/src/class/hid/hid_host.s"
+	@echo "... Users/marco/sdk/tinyusb/src/class/msc/msc_host.obj"
+	@echo "... Users/marco/sdk/tinyusb/src/class/msc/msc_host.i"
+	@echo "... Users/marco/sdk/tinyusb/src/class/msc/msc_host.s"
+	@echo "... Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.obj"
+	@echo "... Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.i"
+	@echo "... Users/marco/sdk/tinyusb/src/class/vendor/vendor_host.s"
+	@echo "... Users/marco/sdk/tinyusb/src/common/tusb_fifo.obj"
+	@echo "... Users/marco/sdk/tinyusb/src/common/tusb_fifo.i"
+	@echo "... Users/marco/sdk/tinyusb/src/common/tusb_fifo.s"
+	@echo "... Users/marco/sdk/tinyusb/src/host/hub.obj"
+	@echo "... Users/marco/sdk/tinyusb/src/host/hub.i"
+	@echo "... Users/marco/sdk/tinyusb/src/host/hub.s"
+	@echo "... Users/marco/sdk/tinyusb/src/host/usbh.obj"
+	@echo "... Users/marco/sdk/tinyusb/src/host/usbh.i"
+	@echo "... Users/marco/sdk/tinyusb/src/host/usbh.s"
+	@echo "... Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.obj"
+	@echo "... Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.i"
+	@echo "... Users/marco/sdk/tinyusb/src/portable/raspberrypi/pio_usb/hcd_pio_usb.s"
+	@echo "... Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.obj"
+	@echo "... Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.i"
+	@echo "... Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/hcd_rp2040.s"
+	@echo "... Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj"
+	@echo "... Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i"
+	@echo "... Users/marco/sdk/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s"
+	@echo "... Users/marco/sdk/tinyusb/src/tusb.obj"
+	@echo "... Users/marco/sdk/tinyusb/src/tusb.i"
+	@echo "... Users/marco/sdk/tinyusb/src/tusb.s"
 	@echo "... src/board_output.obj"
 	@echo "... src/board_output.i"
 	@echo "... src/board_output.s"

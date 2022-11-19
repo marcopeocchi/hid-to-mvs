@@ -1,31 +1,30 @@
 cmake_minimum_required(VERSION 3.13)
 
-set(CFG_TUH_RPI_PIO_USB, 1)
+include($ENV{TINYUSB_PATH}/hw/bsp/family_support.cmake)
 
-# initialize pico-sdk from submodule
-include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
+project(pico-hid-mvs)
 
-project(mvs-to-usb)
+# Checks this example is valid for the family and initializes the project
+family_initialize_project(${PROJECT_NAME} ${CMAKE_CURRENT_LIST_DIR})
 
-# initialize the Raspberry Pi Pico SDK
-pico_sdk_init()
+suppress_tinyusb_warnings()
+add_executable(${PROJECT_NAME})
 
-add_executable(${PROJECT_NAME}
-    src/main.c
-    src/hid_app.c
-    src/board_output.c
-)
+# Example source
+target_sources(${PROJECT_NAME} PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/board_output.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/hid_app.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/main.c
+        )
 
-# create map/bin/hex/uf2 file in addition to ELF.
-pico_add_extra_outputs(${PROJECT_NAME})
+# Example include
+target_include_directories(${PROJECT_NAME} PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+        )
 
-# Add pico_stdlib library which aggregates commonly used features
-# newer: link_library Pico-PIO-USB
-target_link_libraries(${PROJECT_NAME} pico_stdlib tinyusb_host tinyusb_board)
+# Configure compilation flags and libraries for the example... see the corresponding function
+# in hw/bsp/FAMILY/family.cmake for details.
+family_configure_host_example(${PROJECT_NAME})
 
-target_include_directories(${PROJECT_NAME} PRIVATE 
-    src
-)
-
-#pico_enable_stdio_usb(${PROJECT_NAME} 0)
-#pico_enable_stdio_uart(${PROJECT_NAME} 1)
+# For rp2040, un-comment to enable pico-pio-usb
+family_add_pico_pio_usb(${PROJECT_NAME})

@@ -1,1 +1,0 @@
-/opt/homebrew/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O3 -DNDEBUG -Wl,--build-id=none "CMakeFiles/pico-hid-mvs.dir/src/main.c.obj" "CMakeFiles/pico-hid-mvs.dir/src/hid_app.c.obj" "CMakeFiles/pico-hid-mvs.dir/src/board_output.c.obj" -o pico-hid-mvs.elf  -ltinyusb_pico_pio_usb 

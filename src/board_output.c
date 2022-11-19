@@ -3,7 +3,7 @@
 
 void board_output_init()
 {
-  unsigned char output[11] = {
+  uint8_t output[11] = {
     DPAD_UP_PIN,
     DPAD_DOWN_PIN,
     DPAD_RIGHT_PIN,
@@ -17,7 +17,7 @@ void board_output_init()
     ALT_6_PIN,
   };
 
-  for (unsigned char i = 0; i < 11; i++)
+  for (uint8_t i = 0; i < 11; i++)
   {
     gpio_init(output[i]);
     gpio_set_dir(output[i], GPIO_OUT);
