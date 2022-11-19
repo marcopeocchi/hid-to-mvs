@@ -10,10 +10,10 @@
 // hid report typedef
 typedef struct TU_ATTR_PACKED
 {
-  uint8_t x, y, z, rz; // joystick
+  uint8_t x, y, z, rz; // joystick axis
 
   struct {
-    uint8_t dpad  : 4; // 0x08
+    uint8_t dpad  : 4; // N-W-S-E
     uint8_t west  : 1; // X
     uint8_t south : 1; // A
     uint8_t east  : 1; // B
