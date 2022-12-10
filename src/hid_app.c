@@ -6,42 +6,43 @@
 #include "pico/stdlib.h"
 #include "hid_app.h"
 
-
 // hid report typedef
 typedef struct TU_ATTR_PACKED
 {
   uint8_t x, y, z, rz; // joystick axis
 
-  struct {
-    uint8_t dpad  : 4; // N-W-S-E
-    uint8_t west  : 1; // X
+  struct
+  {
+    uint8_t dpad : 4;  // N-W-S-E
+    uint8_t west : 1;  // X
     uint8_t south : 1; // A
-    uint8_t east  : 1; // B
+    uint8_t east : 1;  // B
     uint8_t north : 1; // Y
   };
 
-  struct {
-    uint8_t l1     : 1;
-    uint8_t r1     : 1;
-    uint8_t l2     : 1;
-    uint8_t r2     : 1;
-    uint8_t start  : 1;
+  struct
+  {
+    uint8_t l1 : 1;
+    uint8_t r1 : 1;
+    uint8_t l2 : 1;
+    uint8_t r2 : 1;
+    uint8_t start : 1;
     uint8_t option : 1;
-    uint8_t l3     : 1;
-    uint8_t r3     : 1;
+    uint8_t l3 : 1;
+    uint8_t r3 : 1;
   };
 
-  struct {
-    uint8_t meta    : 1; 
-    uint8_t touch   : 1; // track pad click
+  struct
+  {
+    uint8_t meta : 1;
+    uint8_t touch : 1;   // track pad click
     uint8_t counter : 6; // +1 each report
   };
 
 } controller_report_t;
 
-
 // check if device is compatible by checking its VID and PID
-// compatible devices list: 
+// compatible devices list:
 // https://www.github.com/pico-mvs-hid/wiki/compatible_devices
 static inline bool is_compatible(uint8_t dev_addr)
 {
@@ -49,20 +50,20 @@ static inline bool is_compatible(uint8_t dev_addr)
   tuh_vid_pid_get(dev_addr, &vid, &pid);
 
   return true;
-  return ((vid == 0x054c && (pid == 0x09cc || pid == 0x05c4)) // Sony DualShock4 
-           || (vid == 0x0f0d && pid == 0x005e)                // Hori FC4 
-           || (vid == 0x0f0d && pid == 0x00ee)                // Hori PS4 Mini (PS4-099U) 
-           || (vid == 0x1f4f && pid == 0x1002)                // ASW GG xrd controller
-           || (vid == 0x0ca3 && pid == 0x0024)                // 8bit do m30 2.4G
-           || (vid == 0x057e && pid == 0x2009)                // 8bit do m30 usb
-         );
+  return ((vid == 0x054c && (pid == 0x09cc || pid == 0x05c4)) // Sony DualShock4
+          || (vid == 0x0f0d && pid == 0x005e)                 // Hori FC4
+          || (vid == 0x0f0d && pid == 0x00ee)                 // Hori PS4 Mini (PS4-099U)
+          || (vid == 0x1f4f && pid == 0x1002)                 // ASW GG xrd controller
+          || (vid == 0x0ca3 && pid == 0x0024)                 // 8bit do m30 2.4G
+          || (vid == 0x057e && pid == 0x2009)                 // 8bit do m30 usb
+  );
 }
 
 //--------------------------------------------------------------------+
 // MACRO TYPEDEF CONSTANT ENUM DECLARATION
 //--------------------------------------------------------------------+
 
-void hid_app_task(void){}
+void hid_app_task(void) {}
 
 //--------------------------------------------------------------------+
 // TinyUSB Callbacks
@@ -73,7 +74,7 @@ void hid_app_task(void){}
 // can be used to parse common/simple enough descriptor.
 // Note: if report descriptor length > CFG_TUH_ENUMERATION_BUFSIZE, it will be skipped
 // therefore report_desc = NULL, desc_len = 0
-void tuh_hid_mount_cb(uint8_t dev_addr, uint8_t instance, uint8_t const* desc_report, uint16_t desc_len)
+void tuh_hid_mount_cb(uint8_t dev_addr, uint8_t instance, uint8_t const *desc_report, uint16_t desc_len)
 {
   (void)desc_report;
   (void)desc_len;
@@ -108,12 +109,12 @@ bool diff_than_2(uint8_t x, uint8_t y)
 }
 
 // check if 2 reports are different enough
-bool diff_report(controller_report_t const* rpt1, controller_report_t const* rpt2)
+bool diff_report(controller_report_t const *rpt1, controller_report_t const *rpt2)
 {
   bool result;
 
   // x, y, z, rz must different than 2 to be counted
-  result = diff_than_2(rpt1->x, rpt2->x) || diff_than_2(rpt1->y , rpt2->y ) ||
+  result = diff_than_2(rpt1->x, rpt2->x) || diff_than_2(rpt1->y, rpt2->y) ||
            diff_than_2(rpt1->z, rpt2->z) || diff_than_2(rpt1->rz, rpt2->rz);
 
   // check the reset with mem compare
@@ -123,10 +124,10 @@ bool diff_report(controller_report_t const* rpt1, controller_report_t const* rpt
 }
 
 // process HID report
-void process_compatible(uint8_t const* report, uint16_t len)
+void process_compatible(uint8_t const *report, uint16_t len)
 {
   // previous report used to compare for changes
-  static controller_report_t prev_report = { 0 };
+  static controller_report_t prev_report = {0};
 
   uint8_t const report_id = report[0];
   report++;
@@ -142,10 +143,7 @@ void process_compatible(uint8_t const* report, uint16_t len)
 
     if (diff_report(&prev_report, &dev_report))
     {
-      board_toggle_output(DPAD_UP_PIN   , dev_report.rz == 0);
-      board_toggle_output(DPAD_DOWN_PIN , dev_report.rz == 255);
-      board_toggle_output(DPAD_RIGHT_PIN, dev_report.z == 255);
-      board_toggle_output(DPAD_LEFT_PIN , dev_report.z == 0);
+      stick_handler(dev_report.rz, dev_report.z, 10);
 
       dev_dpad_handler(dev_report.dpad);
 
@@ -154,10 +152,9 @@ void process_compatible(uint8_t const* report, uint16_t len)
       board_toggle_output(A_PIN, dev_report.east);
       board_toggle_output(X_PIN, dev_report.north);
 
-      board_toggle_output(START_PIN , dev_report.start);
+      board_toggle_output(START_PIN, dev_report.start);
+      board_toggle_output(SELECT_PIN, dev_report.meta);
       board_toggle_output(SELECT_PIN, dev_report.option);
-
-      board_toggle_output(ALT_6_PIN, dev_report.meta);
     }
 
     prev_report = dev_report;
@@ -165,7 +162,7 @@ void process_compatible(uint8_t const* report, uint16_t len)
 }
 
 // Invoked when received report from device via interrupt endpoint
-void tuh_hid_report_received_cb(uint8_t dev_addr, uint8_t instance, uint8_t const* report, uint16_t len)
+void tuh_hid_report_received_cb(uint8_t dev_addr, uint8_t instance, uint8_t const *report, uint16_t len)
 {
   if (is_compatible(dev_addr))
   {
@@ -179,17 +176,9 @@ void tuh_hid_report_received_cb(uint8_t dev_addr, uint8_t instance, uint8_t cons
   }
 }
 
-
-void board_toggle_output(uint8_t pin, u_int8_t enabled)
+void board_toggle_output(uint8_t pin, uint8_t enabled)
 {
-  if (enabled)
-  {
-    gpio_put(pin, LOW);
-  }
-  else
-  {
-    gpio_put(pin, HIGH);
-  }
+  enabled ? gpio_put(pin, LOW) : gpio_put(pin, HIGH);
 }
 
 void dev_dpad_handler(uint8_t dpad_value)
@@ -198,68 +187,92 @@ void dev_dpad_handler(uint8_t dpad_value)
   {
   case 0:
     // DPAD North
-    gpio_put(DPAD_UP_PIN   , LOW);
+    gpio_put(DPAD_UP_PIN, LOW);
     gpio_put(DPAD_RIGHT_PIN, HIGH);
-    gpio_put(DPAD_DOWN_PIN , HIGH);
-    gpio_put(DPAD_LEFT_PIN , HIGH);
-    return;
+    gpio_put(DPAD_DOWN_PIN, HIGH);
+    gpio_put(DPAD_LEFT_PIN, HIGH);
+    break;
   case 1:
-    // DPAD North-East                         
-    gpio_put(DPAD_UP_PIN   , LOW);
+    // DPAD North-East
+    gpio_put(DPAD_UP_PIN, LOW);
     gpio_put(DPAD_RIGHT_PIN, LOW);
-    gpio_put(DPAD_DOWN_PIN , HIGH);
-    gpio_put(DPAD_LEFT_PIN , HIGH);
-    return;
-  case 2:  
+    gpio_put(DPAD_DOWN_PIN, HIGH);
+    gpio_put(DPAD_LEFT_PIN, HIGH);
+    break;
+  case 2:
     // DPAD East
-    gpio_put(DPAD_UP_PIN   , HIGH);
+    gpio_put(DPAD_UP_PIN, HIGH);
     gpio_put(DPAD_RIGHT_PIN, LOW);
-    gpio_put(DPAD_DOWN_PIN , HIGH);
-    gpio_put(DPAD_LEFT_PIN , HIGH);
-    return;
+    gpio_put(DPAD_DOWN_PIN, HIGH);
+    gpio_put(DPAD_LEFT_PIN, HIGH);
+    break;
   case 3:
     // DPAD South-East
-    gpio_put(DPAD_UP_PIN   , HIGH);
+    gpio_put(DPAD_UP_PIN, HIGH);
     gpio_put(DPAD_RIGHT_PIN, LOW);
-    gpio_put(DPAD_DOWN_PIN , LOW);
-    gpio_put(DPAD_LEFT_PIN , HIGH);
-    return;
+    gpio_put(DPAD_DOWN_PIN, LOW);
+    gpio_put(DPAD_LEFT_PIN, HIGH);
+    break;
   case 4:
     // DPAD South
-    gpio_put(DPAD_UP_PIN   , HIGH);
+    gpio_put(DPAD_UP_PIN, HIGH);
     gpio_put(DPAD_RIGHT_PIN, HIGH);
-    gpio_put(DPAD_DOWN_PIN , LOW);
-    gpio_put(DPAD_LEFT_PIN , HIGH);
-    return;
+    gpio_put(DPAD_DOWN_PIN, LOW);
+    gpio_put(DPAD_LEFT_PIN, HIGH);
+    break;
   case 5:
     // DPAD South-West
-    gpio_put(DPAD_UP_PIN   , HIGH);
+    gpio_put(DPAD_UP_PIN, HIGH);
     gpio_put(DPAD_RIGHT_PIN, HIGH);
-    gpio_put(DPAD_DOWN_PIN , LOW);
-    gpio_put(DPAD_LEFT_PIN , LOW);
-    return;
+    gpio_put(DPAD_DOWN_PIN, LOW);
+    gpio_put(DPAD_LEFT_PIN, LOW);
+    break;
   case 6:
     // DPAD West
-    gpio_put(DPAD_UP_PIN   , HIGH);
+    gpio_put(DPAD_UP_PIN, HIGH);
     gpio_put(DPAD_RIGHT_PIN, HIGH);
-    gpio_put(DPAD_DOWN_PIN , HIGH);
-    gpio_put(DPAD_LEFT_PIN , LOW);
-    return;
+    gpio_put(DPAD_DOWN_PIN, HIGH);
+    gpio_put(DPAD_LEFT_PIN, LOW);
+    break;
   case 7:
     // DPAD North-West
-    gpio_put(DPAD_UP_PIN   , LOW);
+    gpio_put(DPAD_UP_PIN, LOW);
     gpio_put(DPAD_RIGHT_PIN, HIGH);
-    gpio_put(DPAD_DOWN_PIN , HIGH);
-    gpio_put(DPAD_LEFT_PIN , LOW);
-    return;
+    gpio_put(DPAD_DOWN_PIN, HIGH);
+    gpio_put(DPAD_LEFT_PIN, LOW);
+    break;
   case 8:
     // DPAD Released
-    gpio_put(DPAD_UP_PIN   , HIGH);
+    gpio_put(DPAD_UP_PIN, HIGH);
     gpio_put(DPAD_RIGHT_PIN, HIGH);
-    gpio_put(DPAD_DOWN_PIN , HIGH);
-    gpio_put(DPAD_LEFT_PIN , HIGH);
-    return;
+    gpio_put(DPAD_DOWN_PIN, HIGH);
+    gpio_put(DPAD_LEFT_PIN, HIGH);
+    break;
   default:
-    return;
+    break;
   }
+}
+
+void stick_handler(uint8_t deg_value_y, uint8_t deg_value_z,
+                   uint8_t dead_zone)
+{
+  if (deg_value_y > (127 + dead_zone))
+  {
+    gpio_put(DPAD_DOWN_PIN, LOW);
+  }
+  if (deg_value_y < (127 - dead_zone))
+  {
+    gpio_put(DPAD_UP_PIN, LOW);
+  }
+  if (deg_value_y == 127)
+  {
+    gpio_put(DPAD_UP_PIN, HIGH);
+    gpio_put(DPAD_DOWN_PIN, HIGH);
+  }
+  deg_value_z == 255
+      ? gpio_put(DPAD_RIGHT_PIN, LOW)
+      : gpio_put(DPAD_RIGHT_PIN, HIGH);
+  deg_value_z == 0
+      ? gpio_put(DPAD_LEFT_PIN, LOW)
+      : gpio_put(DPAD_LEFT_PIN, HIGH);
 }

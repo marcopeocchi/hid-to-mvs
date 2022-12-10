@@ -21,4 +21,4 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 
 family_configure_host_example(${PROJECT_NAME})
 
-family_add_pico_pio_usb(${PROJECT_NAME})
+#family_add_pico_pio_usb(${PROJECT_NAME})
