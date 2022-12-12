@@ -14,7 +14,7 @@
 #define DPAD_RIGHT_PIN 28
 #define DPAD_LEFT_PIN 21
 
-// utily
+// utility
 #define START_PIN 5
 #define SELECT_PIN 27 // aka COIN trigger
 #define ALT_6_PIN 7   // aka button 6 / mode 6
