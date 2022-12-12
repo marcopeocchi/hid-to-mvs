@@ -6,7 +6,7 @@
 #include "pico/stdlib.h"
 #include "hid_app.h"
 
-// hid report typedef
+// USB hid report typedef
 typedef struct TU_ATTR_PACKED
 {
   uint8_t x, y, z, rz; // joystick axis
@@ -41,24 +41,6 @@ typedef struct TU_ATTR_PACKED
 
 } controller_report_t;
 
-// check if device is compatible by checking its VID and PID
-// compatible devices list:
-// https://www.github.com/pico-mvs-hid/wiki/compatible_devices
-static inline bool is_compatible(uint8_t dev_addr)
-{
-  uint16_t vid, pid;
-  tuh_vid_pid_get(dev_addr, &vid, &pid);
-
-  return true;
-  return ((vid == 0x054c && (pid == 0x09cc || pid == 0x05c4)) // Sony DualShock4
-          || (vid == 0x0f0d && pid == 0x005e)                 // Hori FC4
-          || (vid == 0x0f0d && pid == 0x00ee)                 // Hori PS4 Mini (PS4-099U)
-          || (vid == 0x1f4f && pid == 0x1002)                 // ASW GG xrd controller
-          || (vid == 0x0ca3 && pid == 0x0024)                 // 8bit do m30 2.4G
-          || (vid == 0x057e && pid == 0x2009)                 // 8bit do m30 usb
-  );
-}
-
 //--------------------------------------------------------------------+
 // MACRO TYPEDEF CONSTANT ENUM DECLARATION
 //--------------------------------------------------------------------+
@@ -81,18 +63,12 @@ void tuh_hid_mount_cb(uint8_t dev_addr, uint8_t instance, uint8_t const *desc_re
   uint16_t vid, pid;
   tuh_vid_pid_get(dev_addr, &vid, &pid);
 
-  printf("HID device address = %d, instance = %d is mounted\r\n", dev_addr, instance);
+  printf("Device address = %d, instance = %d is mounted\r\n", dev_addr, instance);
   printf("VID = %04x, PID = %04x\r\n", vid, pid);
 
-  // Compatible controllers list
-  if (is_compatible(dev_addr))
+  if (!tuh_hid_receive_report(dev_addr, instance))
   {
-    // request to receive report
-    // tuh_hid_report_received_cb() will be invoked when report is available
-    if (!tuh_hid_receive_report(dev_addr, instance))
-    {
-      printf("Error: cannot request to receive report\r\n");
-    }
+    printf("Error: cannot request to receive report\r\n");
   }
 }
 
@@ -124,7 +100,7 @@ bool diff_report(controller_report_t const *rpt1, controller_report_t const *rpt
 }
 
 // process HID report
-void process_compatible(uint8_t const *report, uint16_t len)
+void process_report(uint8_t const *report, uint16_t len)
 {
   // previous report used to compare for changes
   static controller_report_t prev_report = {0};
@@ -162,12 +138,10 @@ void process_compatible(uint8_t const *report, uint16_t len)
 }
 
 // Invoked when received report from device via interrupt endpoint
-void tuh_hid_report_received_cb(uint8_t dev_addr, uint8_t instance, uint8_t const *report, uint16_t len)
+void tuh_hid_report_received_cb(uint8_t dev_addr, uint8_t instance,
+                                uint8_t const *report, uint16_t len)
 {
-  if (is_compatible(dev_addr))
-  {
-    process_compatible(report, len);
-  }
+  process_report(report, len);
 
   // continue to request to receive report
   if (!tuh_hid_receive_report(dev_addr, instance))
@@ -176,12 +150,12 @@ void tuh_hid_report_received_cb(uint8_t dev_addr, uint8_t instance, uint8_t cons
   }
 }
 
-void board_toggle_output(uint8_t pin, uint8_t enabled)
+inline void board_toggle_output(uint8_t pin, uint8_t enabled)
 {
   enabled ? gpio_put(pin, LOW) : gpio_put(pin, HIGH);
 }
 
-void dev_dpad_handler(uint8_t dpad_value)
+static inline void dev_dpad_handler(uint8_t dpad_value)
 {
   switch (dpad_value)
   {
@@ -253,8 +227,8 @@ void dev_dpad_handler(uint8_t dpad_value)
   }
 }
 
-void stick_handler(uint8_t deg_value_y, uint8_t deg_value_z,
-                   uint8_t dead_zone)
+static inline void stick_handler(uint8_t deg_value_y, uint8_t deg_value_z,
+                                 uint8_t dead_zone)
 {
   if (deg_value_y > (127 + dead_zone))
   {

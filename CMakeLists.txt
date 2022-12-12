@@ -6,7 +6,6 @@ project(pico-hid-mvs)
 
 family_initialize_project(${PROJECT_NAME} ${CMAKE_CURRENT_LIST_DIR})
 
-suppress_tinyusb_warnings()
 add_executable(${PROJECT_NAME})
 
 target_sources(${PROJECT_NAME} PUBLIC
@@ -21,4 +20,12 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 
 family_configure_host_example(${PROJECT_NAME})
 
-#family_add_pico_pio_usb(${PROJECT_NAME})
+if(FAMILY STREQUAL "rp2040")
+  family_add_pico_pio_usb(${PROJECT_NAME})
+
+  target_compile_options(${PROJECT_NAME} PUBLIC
+          -Wno-error=cast-qual
+          -Wno-error=sign-conversion
+          -Wno-error=conversion
+          )
+endif()
