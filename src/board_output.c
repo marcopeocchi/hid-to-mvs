@@ -1,7 +1,7 @@
 #include "board_layout.h"
 #include "pico/stdlib.h"
 
-static inline void board_output_init()
+void board_output_init()
 {
   uint8_t output[11] = {
       DPAD_UP_PIN,

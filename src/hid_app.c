@@ -226,10 +226,39 @@ static inline void dev_dpad_handler(uint8_t dpad_value)
     break;
   }
 }
-
-static inline void stick_handler(uint8_t deg_value_y, uint8_t deg_value_z,
+/*
+  Handle the stick rotation in the 2 axis
+  --------------------------------------------------------------------
+  The default state is the following:
+  127   127    -> released
+  The following transorm will be applied for-each report
+   y     x
+  127   0      -> Left
+  127   255    -> Right
+  0     127    -> Up
+  255   127    -> Down
+  --------------------------------------------------------------------
+  A dead zone can be applied to capture the input.
+  The output transform will be the following, where d is the dead zone
+     y       x
+  127     (127-d)
+  127     (127+d)
+  (127-d)   127
+  (127+d)   127
+*/
+static inline void stick_handler(uint8_t deg_value_x, uint8_t deg_value_y,
                                  uint8_t dead_zone)
 {
+  if (deg_value_x == 127)
+  {
+    gpio_put(DPAD_LEFT_PIN, HIGH);
+    gpio_put(DPAD_RIGHT_PIN, HIGH);
+  }
+  if (deg_value_y == 127)
+  {
+    gpio_put(DPAD_UP_PIN, HIGH);
+    gpio_put(DPAD_DOWN_PIN, HIGH);
+  }
   if (deg_value_y > (127 + dead_zone))
   {
     gpio_put(DPAD_DOWN_PIN, LOW);
@@ -238,15 +267,10 @@ static inline void stick_handler(uint8_t deg_value_y, uint8_t deg_value_z,
   {
     gpio_put(DPAD_UP_PIN, LOW);
   }
-  if (deg_value_y == 127)
-  {
-    gpio_put(DPAD_UP_PIN, HIGH);
-    gpio_put(DPAD_DOWN_PIN, HIGH);
-  }
-  deg_value_z == 255
+  deg_value_x > (127 + dead_zone)
       ? gpio_put(DPAD_RIGHT_PIN, LOW)
       : gpio_put(DPAD_RIGHT_PIN, HIGH);
-  deg_value_z == 0
+  deg_value_x < (127 - dead_zone)
       ? gpio_put(DPAD_LEFT_PIN, LOW)
       : gpio_put(DPAD_LEFT_PIN, HIGH);
 }
