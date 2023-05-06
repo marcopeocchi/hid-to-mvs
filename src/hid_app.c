@@ -39,7 +39,7 @@ typedef struct TU_ATTR_PACKED
     uint8_t counter : 6; // +1 each report
   };
 
-} controller_report_t;
+} ctrl_report_t;
 
 //--------------------------------------------------------------------+
 // MACRO TYPEDEF CONSTANT ENUM DECLARATION
@@ -52,18 +52,21 @@ void hid_app_task(void) {}
 //--------------------------------------------------------------------+
 
 // Invoked when device with hid interface is mounted
-// Report descriptor is also available for use. tuh_hid_parse_report_descriptor()
+// Report descriptor is also available for use. 
+// tuh_hid_parse_report_descriptor()
 // can be used to parse common/simple enough descriptor.
-// Note: if report descriptor length > CFG_TUH_ENUMERATION_BUFSIZE, it will be skipped
+// Note: if report descriptor length > CFG_TUH_ENUMERATION_BUFSIZE, 
+// it will be skipped
 // therefore report_desc = NULL, desc_len = 0
-void tuh_hid_mount_cb(uint8_t dev_addr, uint8_t instance, uint8_t const *desc_report, uint16_t desc_len)
+void tuh_hid_mount_cb(uint8_t dev_addr, uint8_t instance, 
+                      uint8_t const *desc_report, uint16_t desc_len)
 {
   (void)desc_report;
   (void)desc_len;
   uint16_t vid, pid;
   tuh_vid_pid_get(dev_addr, &vid, &pid);
 
-  printf("Device address = %d, instance = %d is mounted\r\n", dev_addr, instance);
+  printf("Dev addr = %d, instance = %d is mounted\r\n", dev_addr, instance);
   printf("VID = %04x, PID = %04x\r\n", vid, pid);
 
   if (!tuh_hid_receive_report(dev_addr, instance))
@@ -75,7 +78,7 @@ void tuh_hid_mount_cb(uint8_t dev_addr, uint8_t instance, uint8_t const *desc_re
 // Invoked when device with hid interface is un-mounted
 void tuh_hid_umount_cb(uint8_t dev_addr, uint8_t instance)
 {
-  printf("HID device address = %d, instance = %d is unmounted\r\n", dev_addr, instance);
+  printf("Dev addr = %d, instance = %d is unmounted\r\n", dev_addr, instance);
 }
 
 // check if different than 2
@@ -85,7 +88,7 @@ bool diff_than_2(uint8_t x, uint8_t y)
 }
 
 // check if 2 reports are different enough
-bool diff_report(controller_report_t const *rpt1, controller_report_t const *rpt2)
+bool diff_report(ctrl_report_t const *rpt1, ctrl_report_t const *rpt2)
 {
   bool result;
 
@@ -94,7 +97,7 @@ bool diff_report(controller_report_t const *rpt1, controller_report_t const *rpt
            diff_than_2(rpt1->z, rpt2->z) || diff_than_2(rpt1->rz, rpt2->rz);
 
   // check the reset with mem compare
-  result |= memcmp(&rpt1->rz + 1, &rpt2->rz + 1, sizeof(controller_report_t) - 4);
+  result |= memcmp(&rpt1->rz + 1, &rpt2->rz + 1, sizeof(ctrl_report_t) - 4);
 
   return result;
 }
@@ -103,7 +106,7 @@ bool diff_report(controller_report_t const *rpt1, controller_report_t const *rpt
 void process_report(uint8_t const *report, uint16_t len)
 {
   // previous report used to compare for changes
-  static controller_report_t prev_report = {0};
+  static ctrl_report_t prev_report = {0};
 
   uint8_t const report_id = report[0];
   report++;
@@ -112,7 +115,7 @@ void process_report(uint8_t const *report, uint16_t len)
   // all buttons state is stored in ID 1
   if (report_id == 1)
   {
-    controller_report_t dev_report;
+    ctrl_report_t dev_report;
     memcpy(&dev_report, report, sizeof(dev_report));
 
     prev_report.counter = dev_report.counter;
