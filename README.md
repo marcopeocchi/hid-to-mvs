@@ -12,5 +12,5 @@ export PICO_SDK_PATH=...
 ```
 mkdir build
 cd build
-cmake -DFAMILY rp2040 ..
+cmake -DFAMILY=rp2040 ..
 ```
