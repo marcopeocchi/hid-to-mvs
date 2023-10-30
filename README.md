@@ -1,5 +1,10 @@
 # pico-hid-mvs
 
+`pico-hid-mvs` is a budget-oriented adaptor between any supergun and a USB HID controller.  
+It's based on the Rapsberry Pi pico and designed to be a plug and play solution.
+
+It uses PIO for controlling the USB system and latency should be always in range of 1-2 ms.
+
 Compiler: `arm-gcc-none-eabi`
 
 ## Setup
