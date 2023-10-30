@@ -1,6 +1,6 @@
 # pico-hid-mvs
 
-Compiler: arm-gcc-none-eabi
+Compiler: `arm-gcc-none-eabi`
 
 ## Setup
 ```
