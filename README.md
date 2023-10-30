@@ -15,4 +15,5 @@ cd build
 cmake -DFAMILY=rp2040 ..
 ```
 
-![hid-mvs](https://github.com/marcopeocchi/hid-to-mvs/assets/35533749/4ce04a3d-963c-410c-9c15-ce69b88a2afd)
+![Schematic_rp2040-ng_2023-10-30](https://github.com/marcopeocchi/hid-to-mvs/assets/35533749/6a9f3881-a418-4e64-8d32-ef382b46b315)
+
