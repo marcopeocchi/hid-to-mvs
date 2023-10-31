@@ -22,7 +22,8 @@ cmake -DFAMILY=rp2040 ..
 
 Under the `hw` directory there is all the necessary to produce and assembly the device.
 
-![Schematic_rp2040-ng_2023-10-30](https://github.com/marcopeocchi/hid-to-mvs/assets/35533749/b6dc0a2d-1c49-4163-ab82-408159b6241b)
+<!---![Schematic_rp2040-ng_2023-10-30](https://github.com/marcopeocchi/hid-to-mvs/assets/35533749/b6dc0a2d-1c49-4163-ab82-408159b6241b)-->
+![pico-mvs](https://github.com/marcopeocchi/hid-to-mvs/assets/35533749/e550a2a1-a5a9-481f-acea-fd84e2232a95)
 
 ## Tested Controllers
 - 8BitDo Ultimate C 2.4G
